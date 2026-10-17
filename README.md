@@ -6,7 +6,7 @@ RazorGuard is a deployed fraud-detection dashboard built with Python and Streaml
 
 The project focuses on more than just predictions: it also evaluates precision, recall, false positives, false negatives, and the trade-offs involved in fraud detection.
 
-**🚀 Live Demo:** [Open RazorGuard](YOUR_STREAMLIT_APP_URL)
+**🚀 Live Demo:** [Open RazorGuard](https://razorguard.streamlit.app/)
 
 ---
 
