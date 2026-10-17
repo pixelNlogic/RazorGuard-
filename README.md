@@ -9,6 +9,18 @@ The project focuses on more than just predictions: it also evaluates precision, 
 **🚀 Live Demo:** [Open RazorGuard](https://razorguard.streamlit.app/)
 
 ---
+🖥️ Dashboard Preview
+
+Model Performance
+
+
+
+<img width="959" height="443" alt="image" src="https://github.com/user-attachments/assets/0bc9f4a5-4c5c-413b-9ab4-6d01e72d564f" />
+
+
+Test Set Evaluation
+<img width="920" height="355" alt="image" src="https://github.com/user-attachments/assets/92d8e227-30c9-43f4-9f3b-1488baaca34b" />
+
 
 ## 📌 Project Overview
 
