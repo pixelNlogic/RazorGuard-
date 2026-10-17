@@ -1,0 +1,16 @@
+{
+    "model": "Logistic Regression with StandardScaler",
+    "threshold": 0.9500000000000002,
+    "test_precision": 0.3901345291479821,
+    "test_recall": 0.8877551020408163,
+    "test_f1": 0.5420560747663551,
+    "test_average_precision": 0.7189705771419241,
+    "true_negatives": 56728,
+    "false_positives": 136,
+    "false_negatives": 11,
+    "true_positives": 87,
+    "false_positive_cost_assumption_inr": 500,
+    "false_negative_cost_assumption_inr": 2000,
+    "estimated_cost_inr": 90000,
+    "test_transactions": 56962
+}
