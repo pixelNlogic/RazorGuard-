@@ -72,28 +72,29 @@ st.divider()
 
 # ------------------ METRICS ------------------
 
+
 st.header("📊 Model Performance")
 
 c1, c2, c3, c4 = st.columns(4)
 
 c1.metric(
     "Precision",
-    f"{metrics.get('precision', 0):.2%}"
+    f"{metrics.get('test_precision', 0):.2%}"
 )
 
 c2.metric(
     "Recall",
-    f"{metrics.get('recall', 0):.2%}"
+    f"{metrics.get('test_recall', 0):.2%}"
 )
 
 c3.metric(
     "F1 Score",
-    f"{metrics.get('f1_score', 0):.4f}"
+    f"{metrics.get('test_f1', 0):.2%}"
 )
 
 c4.metric(
     "Average Precision",
-    f"{metrics.get('average_precision', 0):.4f}"
+    f"{metrics.get('test_average_precision', 0):.2%}"
 )
 
 st.caption(
@@ -103,39 +104,6 @@ st.caption(
 
 st.divider()
 
-# ------------------ CONFUSION MATRIX ------------------
-
-st.header("Test Set Evaluation")
-
-tn = int(metrics.get("true_negatives", 0))
-fp = int(metrics.get("false_positives", 0))
-fn = int(metrics.get("false_negatives", 0))
-tp = int(metrics.get("true_positives", 0))
-
-m1, m2, m3, m4 = st.columns(4)
-m1.metric("Correct legitimate", f"{tn:,}")
-m2.metric("False alarms", f"{fp:,}")
-m3.metric("Missed fraud", f"{fn:,}")
-m4.metric("Fraud detected", f"{tp:,}")
-
-matrix = pd.DataFrame(
-    [
-        [tn, fp],
-        [fn, tp],
-    ],
-    index=["Actual legitimate", "Actual fraud"],
-    columns=["Predicted legitimate", "Predicted fraud"],
-)
-
-st.write("**Confusion matrix**")
-st.dataframe(matrix, use_container_width=True)
-
-st.info(
-    "A false alarm flags a legitimate transaction. "
-    "A missed fraud is a fraudulent transaction classified as legitimate."
-)
-
-st.divider()
 
 # ------------------ TRANSACTION PREDICTION ------------------
 
